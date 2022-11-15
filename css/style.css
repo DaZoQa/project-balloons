@@ -36,6 +36,8 @@ body {
   background-color: #fff; }
 
 .container {
+  position: relative;
+  z-index: 0;
   background-color: #f7f7f7; }
 
 body {
@@ -88,6 +90,8 @@ body {
   .title-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25); }
+  .title-secondary_white {
+    color: #FFFFFF; }
 
 .title-third {
   font-size: 2rem;
@@ -296,6 +300,67 @@ body {
       font-weight: 500;
       font-size: 6rem; }
 
+.feedback-card {
+  position: relative;
+  width: 85%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(330deg); }
+  .feedback-card > * {
+    transform: skewX(-330deg); }
+  .feedback-card__img {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    border-radius: 50%;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    margin-right: 4rem;
+    overflow: hidden; }
+    .feedback-card__img img {
+      height: 100%;
+      transform: scale(1.2);
+      transition: all 0.2s; }
+  .feedback-card__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: all 0.2s; }
+  .feedback-card:hover .feedback-card__name {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .feedback-card:hover img {
+    transform: scale(1);
+    filter: blur(0.3rem) brightness(70%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover; }
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7)); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -350,7 +415,7 @@ body {
     transform: translate(-50%, -50%); }
 
 .section-about {
-  padding: 8rem 0; }
+  padding: 8rem 0 20rem 0; }
 
 .section-adventure {
   padding: 21rem 0;
@@ -361,6 +426,11 @@ body {
   transform: skewY(-7deg); }
 
 .section-tour {
-  padding-top: 21rem; }
+  padding-top: 21rem;
+  margin-bottom: 8rem; }
+
+.section-feedback {
+  position: relative;
+  padding: 8rem 0; }
 
 /*# sourceMappingURL=style.css.map */
