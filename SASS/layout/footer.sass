@@ -1,5 +1,5 @@
 .footer
-  padding: 6rem 6rem 1rem 6rem
+  padding: 8rem
   background: #333333
   &__logo
     width: 12rem
@@ -10,6 +10,12 @@
     display: inline-block
     &:not(:last-child)
       margin-right: 5rem
+    @include respond(tab-land)
+      margin-right: 1.6rem
+    @include respond(tab-port)
+      &:not(:last-child)
+        margin: 0
+        padding: 2rem
   &__link
     &:link,&:visited
       color: $color-grey
